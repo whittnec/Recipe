@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's Cook</title>
+	<link rel="stylesheet" href="recipes_styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Monoton" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="main_divs" id="home_div" class="parallax">
+    <h1>Let's Cook</h1>
+</div>
+    
+<div class="main_divs" id="info_div">  
+    <h3>How it Works</h3>
+        <p>Use this website to come up with recipes based on the ingredients you have.</p>
+        <p>Check all the ingredients you have available, click submit, and a recipe using the ingredients you selected appears.</p>
+        <p>Note: These are not real recipes and most likely taste terrible.</p>   
+</div>
+    
+<div class="main_divs" id="select_div" class="parallax">   
+    <h3>Make your selections</h3>
+        <p>You may click on each header to hide and show the options.</p>
+    
+    <button id="button1">Meat</button>
+        <div id="meat">   
+ 	       <input type="checkbox" name="chicken" value="chicken"> Chicken</br>
+	       <input type="checkbox" name="beef" value="beef"> Beef</br>
+	       <input type="checkbox" name="pork" value="pork"/> Pork
+        </div>
+
+    <button id="button2">Vegetables</button>
+        <div id="vegetables"> 
+ 	       <input type="checkbox" name="carrots" value="carrots"/> Carrots</br>
+	       <input type="checkbox" name="tomatoes" value="tomatoes"/> Tomatoes</br>
+	       <input type="checkbox" name="celery" value="celery"/> Celery</br>
+	       <input type="checkbox" name="eggplant" value="eggplant"/> Eggplant
+        </div>
+
+    <button id="button3">Liquids</button>
+        <div id="liquids">   
+ 	       <input type="checkbox" name="water" value="water"/> Water</br>
+	       <input type="checkbox" name="broth" value="broth"/> Broth</br>
+        </div>
+
+    <button id="button4">Seasoning</button>
+        <div id="seasoning">  
+ 	       <input type="checkbox" name="pepper" value="pepper"/> Pepper</br>
+	       <input type="checkbox" name="salt" value="salt"/> Salt</br>
+	       <input type="checkbox" name="safron" value="safron"/> Safron
+        </div>
+
+    <div id="submit">
+          <input type="submit" value="Submit"/>
+    </div>
+
+</div>
+
+<div id="output_div" class="final" class="parallax"> 
+    <h3>Your Recipe</h3>
+        <p>Sorry I'm a terrible cook. I don't have a recipe.</p> 
+</div>
+	
+<script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="recipe.js"></script>
+
+</body>
+
+</html>

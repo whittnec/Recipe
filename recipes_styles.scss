@@ -1,0 +1,130 @@
+$alignment: center;
+$title_font:'Monoton', cursive;
+$width-small:320px;
+$width-medium:730px;
+$width-large:1224px;
+
+@mixin responsive ($wide) {
+	@if $wide == mini-screen {
+		@media only screen and (max-width: $width-small) {
+			@content;
+		}
+	}
+	@else if $wide == small-screen {
+		@media only screen and (min-width: $width-small) {
+			@content;
+		}
+	}
+	
+	@else if $wide == medium-screen {
+		@media only screen and (min-width: $width-medium) {
+			@content;
+		}
+	}
+	
+	@else if $wide == large-screen {
+		@media only screen and (min-width: $width-large) {
+			@content;
+		}
+	}
+}
+
+@mixin parallax ($image, $padtop) {
+	background-image: $image;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: $padtop;
+}
+
+.final {
+	display:none;
+}
+
+.main_divs {
+	height:45em;
+	margin-top:-2em;
+}
+
+h1 {
+	font-family: $title_font;
+	font-size: 4em;
+	text-align:$alignment;
+	
+}
+
+h3 {
+	font-family: $title_font;
+	text-align:$alignment;
+	font-size:2em;
+}
+
+p, button, span {
+	text-align:$alignment;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+button {
+	width:100%;
+	background-color:#e5e54d;
+	font-size:1.3em;
+	
+	+div {
+		padding-bottom:1em;  
+		font-family: 'Love Ya Like A Sister', cursive;
+		@include responsive(mini-screen) {
+			margin-left:40%;
+		}
+		@include responsive(small-screen) {
+			margin-left:40%;
+		}
+
+		@include responsive(medium-screen) {
+			margin-left:45%;
+		}
+		@include responsive(large-screen) {
+			margin-left:47%;
+		}
+
+	}
+}
+
+.more {
+  	color:black;
+  	font-size:1em;
+  	float:right;
+}
+
+#submit {
+	
+	display:flex;
+	justify-content:center;
+	
+	input {
+	font-family: $title_font;
+	background-color:#33FFBD;
+//	margin-top:2em;
+	
+	}
+}
+
+
+#home_div {
+	@include parallax (url("images/food3.jpg"), 20%);
+}
+
+#info_div {
+	@include parallax (url("images/food1.jpg"),20%);
+}
+
+#select_div {
+	@include parallax (url("images/food2.jpg"), 4%);
+}
+
+#output_div {
+	@include parallax (url("images/ghost.jpg"), 30%); 
+}
+
+
+
